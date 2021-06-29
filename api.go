@@ -806,7 +806,7 @@ func (c Client) newRequest(ctx context.Context, method string, metadata requestM
 
 // set User agent.
 func (c Client) setUserAgent(req *http.Request) {
-	req.Header.Set("User-Agent", libraryUserAgent)
+	req.Header.Set("User-Agent", "")
 	if c.appInfo.appName != "" && c.appInfo.appVersion != "" {
 		req.Header.Set("User-Agent", libraryUserAgent+" "+c.appInfo.appName+"/"+c.appInfo.appVersion)
 	}
